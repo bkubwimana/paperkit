@@ -76,8 +76,20 @@ add_pointer() {
     } >> "$file"
     echo "  pointer   added to $(basename "$file")"
 }
+had_agents=0
+[ -f "$TARGET/AGENTS.md" ] && had_agents=1
+had_claude=0
+[ -f "$TARGET/CLAUDE.md" ] && had_claude=1
+
 add_pointer "$TARGET/AGENTS.md" \
     "Paper writing in this repository follows paperkit. Read \`.paperkit/AGENTS.md\` before editing any paper text, figure or number."
+
+# A new CLAUDE.md must keep loading the repo's own AGENTS.md, or Claude Code
+# would see the kit's rules and lose the project's.
+if [ $had_claude -eq 0 ] && [ $had_agents -eq 1 ]; then
+    printf '@AGENTS.md\n' > "$TARGET/CLAUDE.md"
+    echo "  created   CLAUDE.md importing the existing AGENTS.md"
+fi
 add_pointer "$TARGET/CLAUDE.md" "@.paperkit/AGENTS.md"
 
 echo "$version" > "$TARGET/.paperkit/VERSION"
