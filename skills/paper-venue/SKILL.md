@@ -24,8 +24,9 @@ Consider the user input before proceeding.
 
 2. Read `.paperkit/memory/guidelines.md` in full.
 
-3. Identify the venue from the input. Load the matching profile from
-   `.paperkit/venues/`. If no profile exists, say so, copy
+3. Identify the venue from the input. If the input names none, use the
+   `venue` field of `.paperkit/config.json` when set, and say that you did.
+   Load the matching profile from `.paperkit/venues/`. If no profile exists, say so, copy
    `.paperkit/venues/_template.md` to a new profile, and fill it from the
    current call for papers. Ask before committing a new profile.
 

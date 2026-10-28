@@ -44,22 +44,57 @@ inventing new ones: the SIGPLAN Empirical Evaluation Guidelines, SIGARCH's
 checklist manifesto for empirical evaluation, and Heiser's systems
 benchmarking crimes. The review rubric uses their categories.
 
-## Install into a paper repository
+## Install the CLI
 
 ```bash
-git clone git@github.com:bkubwimana/paperkit.git /tmp/paperkit
-/tmp/paperkit/bootstrap.sh /path/to/paper-repo
+uv tool install git+https://github.com/bkubwimana/paperkit.git
 ```
 
-The bootstrap copies `.paperkit/` and the skills into the target repository and
-creates `paper/`. Re-running it upgrades the kit in place and never overwrites
-`.paperkit/memory/guidelines.md` or anything under `paper/`.
+This puts `pk` on your path, with `paperkit` as a long alias. The kit ships
+inside the package, so `pk init` needs no network and always installs the
+version that matches the CLI. Without uv, `pip install --user
+git+https://github.com/bkubwimana/paperkit.git` works too.
 
-To track upstream instead of copying:
+## Set up a paper
 
 ```bash
-git submodule add git@github.com:bkubwimana/paperkit.git .paperkit-upstream
+pk init --here --venue isca
 ```
+
+Or create a new directory with `pk init my-paper --venue isca`. This installs
+`.paperkit/`, the six phase commands for your agent, a `paper/` directory for
+the artifacts, and a pointer in `AGENTS.md` (and `CLAUDE.md` for Claude Code)
+so the agent reads the kit's instructions first. An existing `AGENTS.md` keeps
+its content and stays loaded.
+
+Agents: `--ai claude` (default) installs commands into `.claude/skills/`;
+`--ai codex` into `.agents/skills/`; `--ai claude,codex` both.
+
+## Commands
+
+| Command | What it does |
+| --- | --- |
+| `pk init [DIR] [--here] [--venue V] [--ai A]` | Set up paperkit in a paper repository |
+| `pk status [--json]` | Phases done, claims by status, figure progress, deadline, blockers, next step |
+| `pk scan [PATH]` | Flag placeholders and banned terms in the LaTeX source |
+| `pk upgrade [--dry-run] [--force]` | Update the kit, keeping anything you edited |
+| `pk venue list` / `info V` / `use V` | Browse venue profiles, set the project default |
+| `pk agent list` / `add A` / `remove A` | Choose which agents get the phase commands |
+| `pk check` | Confirm git, bash, Python, LaTeX, uv and agents are installed |
+| `pk version [--json]` | CLI, install commit, Python, project kit version |
+| `pk self check` / `self upgrade` | Compare with the latest on GitHub, upgrade with uv |
+| `pk uninstall --yes` | Remove the kit; edited files and `paper/` are kept |
+
+### How upgrades stay safe
+
+Every file the kit installs is recorded with its SHA-256 in
+`.paperkit/manifest.json`. On `pk upgrade`, a file that still matches its
+record is replaced. A file you edited is kept, and the new version is written
+beside it as `<file>.paperkit-new` for you to merge; `pk status` lists any that
+are waiting. `--force` overwrites instead. Uninstall removes only unmodified
+files. Projects set up with the old `bootstrap.sh` upgrade the same way, and a
+`constitution.md` from before the rename becomes `guidelines.md` with your
+edits intact.
 
 ## Maintaining it
 

@@ -36,6 +36,10 @@ on form. Say out loud when you hit such a conflict rather than quietly picking.
 
 ## Starting work
 
+If the `pk` command is available, run `pk status` first. It reports which
+phases are done, the claim counts by status, the blockers and the next phase.
+Do not treat its output as a substitute for reading the artifacts it names.
+
 If `paper/venue.md` does not exist, run `/paper-venue` first. Everything
 downstream depends on it, and guessing the venue produces a paper shaped for
 no one.
