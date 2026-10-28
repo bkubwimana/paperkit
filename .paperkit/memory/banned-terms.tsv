@@ -1,0 +1,12 @@
+# level	regex (Python, case-insensitive)	message
+# error = must fix before submission; warn = a human decides.
+# Keep in step with the Vocabulary section of constitution.md.
+error	\btreatments?\b	trial jargon: say condition or sharing configuration
+error	\bcohorts?\b	trial jargon: say task set
+error	\bservice (law|model)s?\b	say performance model
+error	\bdevice laws?\b	say performance model
+error	\bcampaigns?\b	say workload recording
+error	\brobot battery\b	the boundary is the electronics: say electronics energy or name the subsystem
+warn	\barms?\b	fine for a robot manipulator; banned for an experimental condition
+warn	(?<!memory )(?<!network )(?<!link )\bbandwidth\b	qualify as memory bandwidth or network bandwidth
+warn	\b(significant(ly)?|dramatic(ally)?|novel|efficient(ly)?)\b	unmeasurable adjective: keep only with a number in the same sentence
