@@ -7,7 +7,7 @@
 # points the repo's agent instructions at .paperkit/AGENTS.md.
 #
 # Safe to re-run. Never overwrites files under .paperkit/memory/ (your
-# constitution and banned terms) or anything under paper/.
+# guidelines and banned terms) or anything under paper/.
 
 set -euo pipefail
 
@@ -40,6 +40,20 @@ chmod +x "$TARGET"/.paperkit/scripts/bash/*.sh 2>/dev/null || true
 
 # 2. User-owned files: copy only if absent.
 mkdir -p "$TARGET/.paperkit/memory"
+
+# Installs before the rename used constitution.md. Carry the user's edits over.
+old="$TARGET/.paperkit/memory/constitution.md"
+new="$TARGET/.paperkit/memory/guidelines.md"
+if [ -f "$old" ] && [ ! -e "$new" ]; then
+    if git -C "$TARGET" ls-files --error-unmatch "$old" >/dev/null 2>&1; then
+        git -C "$TARGET" mv "$old" "$new"
+    else
+        mv "$old" "$new"
+    fi
+    sed -i 's/^# Paper Constitution$/# Paper Guidelines/' "$new"
+    echo "  renamed   .paperkit/memory/constitution.md -> guidelines.md"
+fi
+
 for f in "$KIT"/.paperkit/memory/*; do
     name="$(basename "$f")"
     if [ -e "$TARGET/.paperkit/memory/$name" ]; then
@@ -95,4 +109,4 @@ add_pointer "$TARGET/CLAUDE.md" "@.paperkit/AGENTS.md"
 echo "$version" > "$TARGET/.paperkit/VERSION"
 
 echo
-echo "Done. Next: review .paperkit/memory/constitution.md, then run /paper-venue."
+echo "Done. Next: review .paperkit/memory/guidelines.md, then run /paper-venue."

@@ -22,7 +22,7 @@ Consider the user input before proceeding.
 1. Run `.paperkit/scripts/bash/check-prerequisites.sh --phase outline` and
    parse its JSON. Stop on error.
 
-2. Read the constitution, `paper/venue.md` and `paper/claims.md`.
+2. Read the guidelines, `paper/venue.md` and `paper/claims.md`.
 
 3. Start from the spine in `paper/venue.md`. Do not import a spine from another
    venue or from habit.

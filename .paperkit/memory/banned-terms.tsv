@@ -1,6 +1,6 @@
 # level	regex (Python, case-insensitive)	message
 # error = must fix before submission; warn = a human decides.
-# Keep in step with the Vocabulary section of constitution.md.
+# Keep in step with the Vocabulary section of guidelines.md.
 error	\btreatments?\b	trial jargon: say condition or sharing configuration
 error	\bcohorts?\b	trial jargon: say task set
 error	\bservice (law|model)s?\b	say performance model

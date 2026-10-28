@@ -29,7 +29,7 @@ unsentimental. You do not soften findings and you do not invent them.
 1. Run `.paperkit/scripts/bash/check-prerequisites.sh --phase review` and parse
    its JSON. Stop on error.
 
-2. Read the constitution, `paper/venue.md`, `paper/claims.md`, and
+2. Read the guidelines, `paper/venue.md`, `paper/claims.md`, and
    `paper/figures.md` if present. Then read the draft in full.
 
 3. Work through the rubric in `.paperkit/templates/review-template.md`. Every
@@ -55,7 +55,7 @@ unsentimental. You do not soften findings and you do not invent them.
 
 - Do not edit the draft or claims.md in this phase. Findings only.
 - A finding you are unsure of is marked as such, not dropped and not inflated.
-- Do not review for style beyond the constitution's rules. Reviewers reject on
+- Do not review for style beyond the guidelines' rules. Reviewers reject on
   substance.
 
 ## Report

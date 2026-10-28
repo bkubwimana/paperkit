@@ -1,4 +1,4 @@
-# Paper Constitution
+# Paper Guidelines
 
 House rules for agent-assisted paper writing. These hold across papers and
 venues. The venue profile adds form on top; it never relaxes anything here.
@@ -194,6 +194,22 @@ inferred from a model that is then used to validate itself.
   mechanical and belongs in `/paper-check`.
 - Results produced before a source change are not mixed with results produced
   after it. Pins are recorded; changed pins mean a new result set.
+
+## Sources
+
+Principles I through V restate, for this research line, what the community
+already asks of empirical work. When a rule here is unclear, these settle it.
+
+- **SIGPLAN Empirical Evaluation Guidelines** (Berger, Blackburn, Hauswirth,
+  Hicks, revised 2018). Minimum expectations for claims, baselines,
+  benchmarks, data analysis, metrics, experimental design and presentation.
+  https://www.sigplan.org/Resources/EmpiricalEvaluation
+- **A Checklist Manifesto for Empirical Evaluation**, SIGARCH Computer
+  Architecture Today. The architecture community's case for the checklist.
+  https://www.sigarch.org/a-checklist-manifesto-for-empirical-evaluation-a-preemptive-strike-against-a-replication-crisis-in-computer-science/
+- **Systems Benchmarking Crimes** (Gernot Heiser). The common ways systems
+  evaluations mislead, most of them unintentional.
+  https://gernot-heiser.org/benchmarking-crimes.html
 
 ## Governance
 

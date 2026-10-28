@@ -22,7 +22,7 @@ Consider the user input before proceeding.
 1. Run `.paperkit/scripts/bash/check-prerequisites.sh --phase claims` and parse
    its JSON. Stop on error.
 
-2. Read the constitution and `paper/venue.md`.
+2. Read the guidelines and `paper/venue.md`.
 
 3. Gather sources in this order: the user's input, any existing draft, the
    paper repository's `data/` directory and its README, any existing
@@ -35,7 +35,7 @@ Consider the user input before proceeding.
    exist is not evidence. A data file whose numbers do not match the claim is
    not evidence for that claim. Record the mismatch.
 
-6. Assign status strictly by the constitution's definitions. When in doubt
+6. Assign status strictly by the guidelines' definitions. When in doubt
    between two statuses, pick the weaker one and say why.
 
 7. For every claim involving time, throughput, energy or memory, fill the

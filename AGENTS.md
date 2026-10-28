@@ -6,16 +6,16 @@ touching any paper text, figure, or number.
 ## Order of authority
 
 1. What the user says in this conversation.
-2. `.paperkit/memory/constitution.md`, the house rules.
+2. `.paperkit/memory/guidelines.md`, the house rules.
 3. `paper/venue.md`, the target venue's norms for this paper.
 4. Everything else, including your own instincts about how papers are written.
 
-Where 2 and 3 disagree, the constitution wins on integrity and the venue wins
+Where 2 and 3 disagree, the guidelines win on integrity and the venue wins
 on form. Say out loud when you hit such a conflict rather than quietly picking.
 
 ## Hard rules
 
-- **Do not invent terminology.** The constitution has a vocabulary section.
+- **Do not invent terminology.** The guidelines have a vocabulary section.
   One term per concept. If a concept has no term yet, propose one and ask.
   Do not synonym-swap to make a sentence read better.
 - **Do not write prose that is not backed by a claim row.** Every paragraph of

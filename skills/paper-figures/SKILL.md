@@ -1,6 +1,6 @@
 ---
 name: "paper-figures"
-description: "Build paper/figures.md: one row per figure and table with its takeaway, claims, data file and build script, and check each against the constitution's figure rules."
+description: "Build paper/figures.md: one row per figure and table with its takeaway, claims, data file and build script, and check each against the guidelines' figure rules."
 argument-hint: "Optional: figure IDs to check or a figures directory to scan"
 compatibility: "Requires paperkit structure and paper/claims.md"
 metadata:
@@ -22,7 +22,7 @@ Consider the user input before proceeding.
 1. Run `.paperkit/scripts/bash/check-prerequisites.sh --phase figures` and
    parse its JSON. Stop on error.
 
-2. Read the constitution's figure, data and naming sections, plus
+2. Read the guidelines' figure, data and naming sections, plus
    `paper/claims.md` and `paper/outline.md` if present.
 
 3. Inventory existing figures in the paper repository and the figures the

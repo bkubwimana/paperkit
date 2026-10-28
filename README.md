@@ -34,10 +34,15 @@ around the gap.
 Phases 2 through 4 are a loop, not a line. A review finding usually sends you
 back to claims.
 
-The constitution at `.paperkit/memory/constitution.md` governs all six. It
-holds the rules that do not change between papers: research integrity,
-terminology, prose, figures. Edit it per project; do not let an agent edit it
-without being asked.
+The paper guidelines at `.paperkit/memory/guidelines.md` govern all six. They
+hold the rules that do not change between papers: research integrity,
+terminology, prose, figures. Edit them per project; do not let an agent edit
+them without being asked.
+
+The evaluation principles follow the community's own documents rather than
+inventing new ones: the SIGPLAN Empirical Evaluation Guidelines, SIGARCH's
+checklist manifesto for empirical evaluation, and Heiser's systems
+benchmarking crimes. The review rubric uses their categories.
 
 ## Install into a paper repository
 
@@ -48,7 +53,7 @@ git clone git@github.com:bkubwimana/paperkit.git /tmp/paperkit
 
 The bootstrap copies `.paperkit/` and the skills into the target repository and
 creates `paper/`. Re-running it upgrades the kit in place and never overwrites
-`.paperkit/memory/constitution.md` or anything under `paper/`.
+`.paperkit/memory/guidelines.md` or anything under `paper/`.
 
 To track upstream instead of copying:
 
@@ -64,5 +69,5 @@ to year. Anything in a venue profile marked `VERIFY` must be checked against
 the current call for papers before you rely on it. The rest is reasoning you
 can trust between years.
 
-When a reviewer teaches you something, add it to the constitution or the venue
+When a reviewer teaches you something, add it to the guidelines or the venue
 profile. That is the whole maintenance loop.

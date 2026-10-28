@@ -37,7 +37,7 @@ Nothing is skipped.
 | Item | Result | Note |
 | --- | --- | --- |
 | No TODO, TBD, XXX, FIXME or placeholder text | | |
-| No banned terms from the constitution's vocabulary | | |
+| No banned terms from the guidelines' vocabulary | | |
 | No part numbers in the paper where the family name is required | | |
 | References complete: no question marks, no missing venues or years | | |
 | No undefined references or labels in the build log | | |

@@ -22,7 +22,7 @@ Consider the user input before proceeding.
 1. Run `.paperkit/scripts/bash/check-prerequisites.sh --phase venue` from the
    repository root and parse its JSON. Stop on error.
 
-2. Read `.paperkit/memory/constitution.md` in full.
+2. Read `.paperkit/memory/guidelines.md` in full.
 
 3. Identify the venue from the input. Load the matching profile from
    `.paperkit/venues/`. If no profile exists, say so, copy

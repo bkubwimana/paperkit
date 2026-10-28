@@ -21,12 +21,12 @@ while [ $# -gt 0 ]; do
 done
 
 case "$phase" in
-    venue)   required=(constitution);                 recommended=() ;;
-    claims)  required=(constitution venue);           recommended=() ;;
-    outline) required=(constitution venue claims);    recommended=() ;;
-    figures) required=(constitution claims);          recommended=(outline) ;;
-    review)  required=(constitution venue claims);    recommended=(figures outline) ;;
-    check)   required=(constitution venue claims);    recommended=(figures outline) ;;
+    venue)   required=(guidelines);                 recommended=() ;;
+    claims)  required=(guidelines venue);           recommended=() ;;
+    outline) required=(guidelines venue claims);    recommended=() ;;
+    figures) required=(guidelines claims);          recommended=(outline) ;;
+    review)  required=(guidelines venue claims);    recommended=(figures outline) ;;
+    check)   required=(guidelines venue claims);    recommended=(figures outline) ;;
     *) echo "usage: $0 --phase <venue|claims|outline|figures|review|check>" >&2; exit 2 ;;
 esac
 
@@ -37,7 +37,7 @@ root="$(find_paperkit_root)" || {
 
 path_for() {
     case "$1" in
-        constitution) echo "$root/.paperkit/memory/constitution.md" ;;
+        guidelines) echo "$root/.paperkit/memory/guidelines.md" ;;
         venue)        echo "$root/paper/venue.md" ;;
         claims)       echo "$root/paper/claims.md" ;;
         outline)      echo "$root/paper/outline.md" ;;
@@ -61,8 +61,8 @@ ok=true
 
 printf '{"ok":%s,"phase":"%s","root":"%s","paper_dir":"%s",' \
     "$ok" "$phase" "$(json_escape "$root")" "$(json_escape "$root/paper")"
-printf '"constitution":"%s","venue":"%s","claims":"%s","outline":"%s","figures":"%s",' \
-    "$(json_escape "$(path_for constitution)")" "$(json_escape "$(path_for venue)")" \
+printf '"guidelines":"%s","venue":"%s","claims":"%s","outline":"%s","figures":"%s",' \
+    "$(json_escape "$(path_for guidelines)")" "$(json_escape "$(path_for venue)")" \
     "$(json_escape "$(path_for claims)")" "$(json_escape "$(path_for outline)")" \
     "$(json_escape "$(path_for figures)")"
 printf '"missing":%s,"recommended_missing":%s}\n' \
