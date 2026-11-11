@@ -29,6 +29,11 @@ replace the venue's disclosure requirements.
    change. If a required artifact is missing, report it. If the section contains
    an unsupported assertion, flag that assertion; other supported prose can
    still be edited. Never fill a gap with a plausible result.
+4. When a writing problem would benefit from an example, consult
+   `.paperkit/references/architecture-exemplars.md`. Select one or two relevant
+   passages and follow its reading and reporting steps. Keep external examples
+   separate from the author's voice samples. Their writing techniques may guide
+   the edit; their scientific claims do not supply evidence for this paper.
 
 ## Audit, revise, verify
 
