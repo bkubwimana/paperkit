@@ -11,7 +11,7 @@ checked artifacts, and later phases refuse to run until the earlier ones exist.
 ## Why it exists
 
 An agent asked to "write the evaluation section" will produce something that
-reads like a paper and is wrong in the ways reviewers punish. It invents
+reads like a paper and is wrong in the ways reviewers judge. It invents
 terminology, picks a convenient baseline, states a claim no figure supports,
 and mixes measured with modelled numbers. None of that is visible in the prose.
 
