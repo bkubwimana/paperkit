@@ -1,0 +1,10 @@
+# Editorial warnings only. A match is a prompt to inspect context, not evidence of AI authorship.
+# Architecture terms, grammatical constructions and individual punctuation marks are not banned.
+warn	\bin recent years\b	generic opening: consider starting with this paper's specific bottleneck
+warn	\bwith the rapid (development|growth|advancement) of\b	generic opening: state the concrete change that motivates this work
+warn	\bit (is worth noting|should be (noted|emphasized)) that\b	filler: consider stating the observation directly
+warn	\b(paves? the way|opens? new avenues|of paramount importance)\b	promotional framing: explain the supported consequence
+warn	\b(groundbreaking|revolutionary|transformative)\b	check whether praise can be replaced with a supported technical distinction
+warn	\b(extensive|comprehensive|thorough) (experiments|evaluation|evaluations)\b	state the actual evaluated scope only if it is already documented
+warn	\b(to the best of our knowledge|for the first time)\b	check the novelty claim against the closest prior work; do not remove it automatically
+warn	\b(moreover|furthermore|additionally)\b	check repeated transitions: make the logical connection explicit where needed

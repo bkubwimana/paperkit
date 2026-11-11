@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scan paper source for placeholders and banned vocabulary.
+"""Scan paper source for placeholders, banned vocabulary and prose warnings.
 
 Usage: scan_text.py ROOT [--terms FILE] [--ext .tex,.bib]
 
@@ -51,6 +51,11 @@ def main():
 
     exts = {e if e.startswith(".") else "." + e for e in args.ext.split(",")}
     terms = load_terms(args.terms)
+    # Keep editorial suggestions separate from project-specific hard vocabulary.
+    # Even an accidentally stronger level in this file cannot block submission.
+    style_path = os.path.join(os.path.dirname(default_terms), "prose-patterns.tsv")
+    if os.path.isfile(style_path):
+        terms.extend(("warn", rx, message) for _level, rx, message in load_terms(style_path))
     errors = warns = 0
 
     for path in iter_files(args.root, exts):

@@ -179,6 +179,12 @@ def collect(root: Path, today: _dt.date | None = None) -> dict:
     rep["phases"]["check"] = {"exists": check is not None, "file": "paper/submission-check.md",
                               "result": parse_check(check) if check else None}
 
+    # Editing is an optional loop, not a seventh required phase. Its presence
+    # records work performed, never certifies the current manuscript.
+    edits = sorted(paper.glob("edit-*.md")) if paper.is_dir() else []
+    rep["editing"] = {"voice_profile": (paper / "voice.md").is_file(),
+                      "latest_report": edits[-1].relative_to(root).as_posix() if edits else None}
+
     tbd = 0
     if paper.is_dir():
         for p in paper.glob("*.md"):
@@ -246,6 +252,10 @@ def render(rep: dict) -> str:
         out.append("[ ] review")
     k = rep["phases"]["check"]
     out.append(f"{box(k['exists'])} check    " + (k["result"] or ("no result" if k["exists"] else "")))
+    editing = rep["editing"]
+    if editing["voice_profile"] or editing["latest_report"]:
+        out.append("optional editing: voice " + ("recorded" if editing["voice_profile"] else "defaults")
+                   + (f" | {editing['latest_report']} (not a gate)" if editing["latest_report"] else ""))
     out.append("")
     out.append(f"TBD in paper/: {rep['tbd']}")
     if rep["pending_new_versions"]:
