@@ -91,6 +91,27 @@ inventing new ones: the SIGPLAN Empirical Evaluation Guidelines, SIGARCH's
 checklist manifesto for empirical evaluation, and Heiser's systems
 benchmarking crimes. The review rubric uses their categories.
 
+### Learn from recent architecture papers
+
+The bundled [annotated reading guide](.paperkit/references/architecture-exemplars.md)
+covers five papers from 2023-2026: Splitwise for motivation-to-design reasoning,
+DynamoLLM for constrained optimization and tradeoffs, uPIMulator for simulator
+validation, TPU v4 for system design explanations, and CounterPoint for careful
+inference from measurements. Each entry links the paper, names the version and
+sections to read, and suggests a concrete writing technique.
+
+The writing guide and `/paper-edit` route agents to relevant passages when
+helpful. Agents record what they consulted and applied. These are selected
+writing exemplars, not a current performance ranking or a guarantee of human
+authorship. Your claims, evidence, and voice still determine what gets written.
+
+For example:
+
+```text
+/paper-edit main.tex, motivation only; use Splitwise as an argument example,
+keep my voice and all scientific claims, and report which passages you read.
+```
+
 ## Install the CLI
 
 ```bash

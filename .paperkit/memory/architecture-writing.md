@@ -19,6 +19,15 @@ for this paper. Do not copy distinctive sentences. With no samples, say that
 you are using the architecture defaults below; do not pretend to know the
 author's voice or make samples a prerequisite.
 
+## Learn from published architecture papers
+
+When a concrete writing problem would benefit from a published example, consult
+the [annotated reading guide](../references/architecture-exemplars.md). Choose
+one or two relevant passages and follow its source-reading and reporting steps.
+Use the observed writing technique with this paper's own claims and evidence.
+External exemplars do not establish the author's voice; only an explicit author
+choice turns an external style lesson into a preference in `paper/voice.md`.
+
 ## Build an argument, not a list of polished sentences
 
 - Start where this paper becomes specific: the resource constraint, failed

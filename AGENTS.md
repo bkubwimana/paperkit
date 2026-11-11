@@ -74,8 +74,11 @@ follow them. Keep the venue's current AI-use and disclosure policy in
 
 ## Maintaining the kit itself
 
-Keep shared writing guidance in `.paperkit/memory/`, phase instructions in
-`skills/`, and project-specific choices in `paper/`; avoid duplicating rules.
+Keep shared writing guidance in `.paperkit/memory/`, annotated reading
+references in `.paperkit/references/`, phase instructions in `skills/`, and
+project-specific choices in `paper/`; avoid duplicating rules. Each exemplar
+needs a verified publication record, inspected version and passages, and a
+specific writing lesson. Keep external examples distinct from author samples.
 An optional editing loop must not become a submission blocker. Editorial
 patterns produce warnings, not automatic rewrites or AI-authorship judgments.
 When adding a skill or resource, verify install/upgrade delivery to Claude and

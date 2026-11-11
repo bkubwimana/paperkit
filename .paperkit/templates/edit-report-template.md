@@ -3,6 +3,13 @@
 Edited: [DATE AND TIME] | Mode: [audit / edit] | Draft: [path and revision]
 Voice: [paper/voice.md and samples used, or architecture defaults]
 
+## External writing examples
+
+[N/A if none. Otherwise record each paper's URL, version or access date,
+sections actually read, the writing technique, and where it was applied or
+proposed. If using only a catalog annotation, label that; do not imply a source
+was read. External examples are separate from author voice samples.]
+
 ## Audit and changes
 
 | Location | Issue and proposed fix | Claim ID or setup it supports | Applied or proposed |
