@@ -39,6 +39,9 @@ Consider the user input before proceeding.
    table from the CFP itself. If you cannot reach the CFP, mark each row
    `UNVERIFIED` with the reason. Never fill a constraint from the profile's
    historical note.
+   Include AI assistance and disclosure requirements from the current venue
+   author policy, with its URL and verification date. Do not assume an editing
+   exception covers substantial rewriting.
 
 6. Adapt the profile's spine to this paper. Note dropped or added sections.
 

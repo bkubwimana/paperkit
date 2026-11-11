@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Check that the artifacts a paperkit phase depends on exist.
 #
-# Usage: check-prerequisites.sh --phase <venue|claims|outline|figures|review|check>
+# Usage: check-prerequisites.sh --phase <venue|claims|outline|figures|edit|review|check>
 #
 # Prints one JSON object. Exit 0 when the phase may run, 1 when a required
 # artifact is missing, 2 on usage error.
@@ -25,9 +25,10 @@ case "$phase" in
     claims)  required=(guidelines venue);           recommended=() ;;
     outline) required=(guidelines venue claims);    recommended=() ;;
     figures) required=(guidelines claims);          recommended=(outline) ;;
+    edit)    required=(guidelines venue claims);    recommended=() ;;
     review)  required=(guidelines venue claims);    recommended=(figures outline) ;;
     check)   required=(guidelines venue claims);    recommended=(figures outline) ;;
-    *) echo "usage: $0 --phase <venue|claims|outline|figures|review|check>" >&2; exit 2 ;;
+    *) echo "usage: $0 --phase <venue|claims|outline|figures|edit|review|check>" >&2; exit 2 ;;
 esac
 
 root="$(find_paperkit_root)" || {

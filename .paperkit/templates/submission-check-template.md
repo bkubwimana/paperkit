@@ -14,6 +14,7 @@ Nothing is skipped.
 | Anonymized: no names, affiliations, acknowledgments, identifying self-citations or URLs | | |
 | PDF fonts embedded | | |
 | Supplementary material within limits | | |
+| AI assistance complies with the verified venue policy; disclosure included where required | | |
 
 ## Claims
 
@@ -41,6 +42,11 @@ Nothing is skipped.
 | No part numbers in the paper where the family name is required | | |
 | References complete: no question marks, no missing venues or years | | |
 | No undefined references or labels in the build log | | |
+| If an editorial pass was used, its mechanical differences and manual checks are resolved for this draft | | |
+
+The editorial-pass item is N/A when no such pass was used. Editorial style
+warnings alone do not fail the gate. Unresolved scientific changes or unchecked
+preservation items do. An old edit/review report does not validate a newer draft.
 
 ## Result
 

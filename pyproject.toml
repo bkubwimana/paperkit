@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "paperkit"
-version = "0.2.0"
+version = "0.3.0"
 description = "Conference grounding for agent-assisted paper writing"
 readme = "README.md"
 license = "BSD-3-Clause"

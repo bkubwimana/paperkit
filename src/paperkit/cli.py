@@ -13,6 +13,7 @@ from pathlib import Path
 from paperkit import REPO_URL, __version__
 from paperkit import install as kit
 from paperkit import status as st
+from paperkit import edit_check
 
 TOOLS = [
     # name, candidates, required, purpose
@@ -95,6 +96,16 @@ def cmd_scan(args) -> int:
         return 2
     cmd = [sys.executable, "-I", str(script), str(args.path or root), "--ext", args.ext]
     return subprocess.run(cmd, check=False).returncode
+
+
+def cmd_edit_check(args) -> int:
+    try:
+        rep = edit_check.check_files(Path(args.before), Path(args.after), terms=tuple(args.term))
+    except (OSError, UnicodeError, ValueError) as exc:
+        print(f"pk edit-check: {exc}", file=sys.stderr)
+        return 2
+    print(json.dumps(rep, indent=2) if args.json else edit_check.render(rep))
+    return 0 if rep["result"] == "PASS" else 1
 
 
 def cmd_check(args) -> int:
@@ -226,7 +237,7 @@ def build_parser() -> argparse.ArgumentParser:
         prog="pk",
         description="paperkit: conference grounding for agent-assisted paper writing.",
         epilog="Phases run inside your agent: /paper-venue, /paper-claims, /paper-outline, "
-               "/paper-figures, /paper-review, /paper-check.",
+               "/paper-figures, /paper-review, /paper-check. Optional prose loop: /paper-edit.",
     )
     p.add_argument("-V", "--version", action="version", version=f"pk {kit.kit_version_string()}")
     sub = p.add_subparsers(dest="cmd", metavar="COMMAND")
@@ -263,6 +274,13 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--dir")
     s.add_argument("--ext", default=".tex", help="comma-separated extensions (default .tex)")
     s.set_defaults(func=cmd_scan)
+
+    s = sub.add_parser("edit-check", help="compare protected tokens before and after an editorial pass")
+    s.add_argument("before", help="original .tex or .md file (retained baseline)")
+    s.add_argument("after", help="edited file of the same type")
+    s.add_argument("--term", action="append", default=[], help="binding term to preserve (repeatable)")
+    s.add_argument("--json", action="store_true")
+    s.set_defaults(func=cmd_edit_check)
 
     s = sub.add_parser("check", help="check required tools are installed")
     s.set_defaults(func=cmd_check)

@@ -14,9 +14,13 @@ Verified on: [DATE]
 | Format | [class and version] | CFP |
 | Artifact evaluation | [required / optional / none] | CFP |
 | Supplementary material | [allowed / limits] | CFP |
+| AI assistance and disclosure | [permitted uses, declaration requirements and placement] | [current venue policy URL] |
 
 Every row comes from the CFP itself, not from the profile. If a row could not
 be verified, it says `UNVERIFIED` and the reason.
+For AI assistance, consult the venue's linked author policy as needed. Record
+the policy's verification date; do not assume grammar checks and substantive
+rewriting have the same requirements.
 
 ## Fit
 

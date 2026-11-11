@@ -38,6 +38,11 @@ Consider the user input before proceeding.
      the data file. Report every mismatch with both values.
    - Figures: all final, all referenced, all with data files.
    - References and labels: read the build log for undefined references.
+   - AI assistance: check the verified venue policy and any required declaration.
+   - Editorial preservation: if an edit report exists for this draft, check
+     that mechanical differences and manual checks are resolved. A skipped
+     editing loop is N/A, not a failure. Style warnings require judgment and
+     cannot alone block submission.
 
 5. Write `paper/submission-check.md` from the template. Every item is PASS,
    FAIL or N/A with a reason.

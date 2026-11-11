@@ -34,8 +34,55 @@ around the gap.
 Phases 2 through 4 are a loop, not a line. A review finding usually sends you
 back to claims.
 
-The paper guidelines at `.paperkit/memory/guidelines.md` govern all six. They
-hold the rules that do not change between papers: research integrity,
+### Writing that sounds like the researcher
+
+PaperKit targets computer architecture and systems papers. When you ask for
+prose, the agent reads the shared
+[architecture writing guide](.paperkit/memory/architecture-writing.md): start
+from the bottleneck, connect the mechanism to the observation, explain the
+comparison, and keep its costs and limits visible. The guidance applies to
+the first draft as well as revisions.
+
+Use `/paper-edit main.tex` to revise an existing draft, or
+`/paper-edit audit main.tex` for findings without manuscript edits. This is an
+optional loop before substantive review; the six required phases stay the same.
+It audits the scoped text, revises it when requested, and writes a change and
+preservation report under `paper/edit-<timestamp>.md`. Clear passages can stay
+as written. It preserves technical terms, qualifications, and scientific content.
+
+Supply a writing sample with the request, for example:
+
+```text
+/paper-edit main.tex, introduction only; match my voice from prior-paper.tex
+```
+
+The agent records sourced observations and your corrections in `paper/voice.md`
+using the bundled template. Future writing reads that profile. Without samples,
+it uses architecture defaults. Samples never supply facts for the current paper.
+
+Each edited source file gets an original snapshot under `paper/edit-baselines/`.
+The mechanical check is also available directly, outside a PaperKit project:
+
+```bash
+pk edit-check before.tex after.tex --term "decision latency" --json
+```
+
+It compares occurrences of numbers, common quantities, citation/reference keys,
+labels, common TeX math forms, input paths, selected qualifiers, and explicit
+terms. Exit codes: 0 means these inventories match, 1 means REVIEW for detected
+differences, and 2 means an input error. A PASS does not establish scientific
+equivalence: the editor must inspect the diff for changed meaning, swapped
+comparisons, negation, and scope. It does not expand TeX macros or included files;
+run it separately for every edited source. Markdown supports the textual checks;
+TeX-specific math and citation extraction is only applied to `.tex` files.
+
+`pk scan` also flags common generic or promotional phrases as editorial
+warnings. A warning is a contextual suggestion, never an AI-authorship test or
+an automatic submission failure. Technical words and punctuation are not banned
+to make prose "human". Verified venue AI-use and disclosure rules still apply.
+
+The paper guidelines at `.paperkit/memory/guidelines.md` govern all six and the
+editing loop. They hold the rules that do not change between papers: research integrity,
 terminology, prose, figures. Edit them per project; do not let an agent edit
 them without being asked.
 
@@ -62,8 +109,8 @@ pk init --here --venue isca
 ```
 
 Or create a new directory with `pk init my-paper --venue isca`. This installs
-`.paperkit/`, the six phase commands for your agent, a `paper/` directory for
-the artifacts, and a pointer in `AGENTS.md` (and `CLAUDE.md` for Claude Code)
+`.paperkit/`, the six phase commands and `/paper-edit` for your agent, a `paper/`
+directory for the artifacts, and a pointer in `AGENTS.md` (and `CLAUDE.md` for Claude Code)
 so the agent reads the kit's instructions first. An existing `AGENTS.md` keeps
 its content and stays loaded.
 
@@ -77,6 +124,7 @@ Agents: `--ai claude` (default) installs commands into `.claude/skills/`;
 | `pk init [DIR] [--here] [--venue V] [--ai A]` | Set up paperkit in a paper repository |
 | `pk status [--json]` | Phases done, claims by status, figure progress, deadline, blockers, next step |
 | `pk scan [PATH]` | Flag placeholders and banned terms in the LaTeX source |
+| `pk edit-check BEFORE AFTER [--term TERM] [--json]` | Compare protected content before/after a prose edit; manually review meaning |
 | `pk upgrade [--dry-run] [--force]` | Update the kit, keeping anything you edited |
 | `pk venue list` / `info V` / `use V` | Browse venue profiles, set the project default |
 | `pk agent list` / `add A` / `remove A` | Choose which agents get the phase commands |
@@ -106,3 +154,12 @@ can trust between years.
 
 When a reviewer teaches you something, add it to the guidelines or the venue
 profile. That is the whole maintenance loop.
+
+### Attribution
+
+The optional editorial workflow adapts the audit/rewrite/report, preservation,
+and author-voice ideas from
+[academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer).
+The architecture guidance and fact-preserving examples are tailored to PaperKit.
+See [.paperkit/THIRD_PARTY_NOTICES.md](.paperkit/THIRD_PARTY_NOTICES.md) for the
+pinned upstream version and MIT notice. PaperKit's own license remains BSD-3-Clause.

@@ -3,7 +3,7 @@
 House rules for agent-assisted paper writing. These hold across papers and
 venues. The venue profile adds form on top; it never relaxes anything here.
 
-Version: 1.0.0 | Ratified: 2026-10-28 | Owner: bkubwimana
+Version: 1.1.0 | Ratified: 2026-11-10 | Owner: bkubwimana
 
 ## Core Principles
 
@@ -160,14 +160,22 @@ inferred from a model that is then used to validate itself.
 ## Prose
 
 - Present tense for what the paper does. Past tense for what was run.
-- Active voice. The system does things; things are not done to it by nobody.
-- No adjectives that cannot be measured. Drop "significant", "dramatic",
-  "novel", "efficient" unless a number follows in the same sentence.
+- Prefer active voice when the actor explains the mechanism. Passive voice is
+  appropriate when the actor is irrelevant, as in a measurement procedure.
+- Replace unsupported praise with the actual technical distinction. A number
+  alone does not justify "statistically significant"; the test must support it.
+  A novelty claim needs comparison with prior work, not just a nearby number.
 - Define every metric before its first number. Units on every quantity.
 - Contributions are falsifiable statements, not activities. "We show X" beats
   "We explore X".
 - A sentence containing two numbers that are not being compared should be two
   sentences, or a table.
+- Preserve evidence-based hedging, negation, scope and technical terms during
+  editing. Changes to claim strength are proposed explicitly, not hidden in
+  a style pass. Never add a result or evidence pointer to make prose convincing.
+- Follow `architecture-writing.md` in this directory for argument, flow and
+  author voice. Project-specific preferences live in `paper/voice.md` and never
+  override scientific integrity or verified venue requirements.
 
 ## Figures
 
@@ -220,3 +228,11 @@ Amendments record what changed and why, usually a reviewer comment or a mistake
 that reached a draft. Version is MAJOR.MINOR.PATCH: MAJOR for a principle
 removed or reversed, MINOR for a principle or binding term added, PATCH for
 wording.
+
+### Amendment record
+
+- 1.1.0 (2026-11-10): add an architecture-focused writing and editing workflow,
+  persist author voice, and protect scientific content during prose edits.
+  Allow useful passive voice and separate significance/novelty support from
+  the old requirement for a nearby number. Adapted editorial sources and their
+  license notice are recorded in `.paperkit/THIRD_PARTY_NOTICES.md`.
