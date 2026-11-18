@@ -29,11 +29,16 @@ replace the venue's disclosure requirements.
    change. If a required artifact is missing, report it. If the section contains
    an unsupported assertion, flag that assertion; other supported prose can
    still be edited. Never fill a gap with a plausible result.
+   Read the claims file's Terminology section and follow the guidelines'
+   terminology checks, including their fallback for older claims files.
 4. When a writing problem would benefit from an example, consult
    `.paperkit/references/architecture-exemplars.md`. Select one or two relevant
    passages and follow its reading and reporting steps. Keep external examples
    separate from the author's voice samples. Their writing techniques may guide
    the edit; their scientific claims do not supply evidence for this paper.
+5. For captions, read `.paperkit/memory/figure-captions.md` and inspect the
+   associated figures and evidence. Audit purpose, essential context, and
+   repeated numerical detail; do not force a number into every caption.
 
 ## Audit, revise, verify
 
@@ -55,15 +60,23 @@ replace the venue's disclosure requirements.
   status, comparator identity, aggregation, scope, and substantive coverage.
   Report proposed changes to scientific meaning or claim strength separately;
   do not silently edit claims.md to justify them.
+  For caption edits, use the caption guide's verification and reporting rules
+  for removing repeated values or relocating detail within the authorized
+  scope. Preserve the information and keep the checker's actual REVIEW result.
 - Run `pk edit-check BASELINE.tex EDITED.tex` for **each** edited source file.
   If `pk` is unavailable, run `python -m paperkit edit-check` from the CLI's
-  environment. Use repeated `--term "..."` for the section's binding technical
-  terms. Keep the actual output and source hashes in the report. Resolve every
-  REVIEW result or report it as unresolved; do not label a skipped check PASS.
+  environment. Use repeated `--term "..."` for the section's agreed technical
+  terms and relevant recorded short forms. Keep the actual output and source
+  hashes in the report. Resolve every REVIEW result or report it as unresolved;
+  do not label a skipped check PASS.
 - Manually inspect the diff even after PASS. Check which number belongs to which
   result, units and boundaries, negation, qualifier placement, conditions, and
   observation versus causal interpretation. The checker compares a limited
   inventory; it cannot establish scientific equivalence or expand TeX macros.
+- Check technical names and meanings against the terminology record in the
+  requested scope, including any captions or labels inspected. Report the
+  location, conflicting usage, agreed term, and meaning affected. Matching
+  `--term` counts cannot detect all aliases or a term used for two concepts.
 
 ## Deliver
 

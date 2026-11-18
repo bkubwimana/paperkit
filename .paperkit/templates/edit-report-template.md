@@ -19,6 +19,11 @@ was read. External examples are separate from author voice samples.]
 Distinguish prose edits from proposed changes to scope or claim strength.
 Explain the useful changes; do not manufacture a finding for every sentence.
 
+For terminology findings, include the location, observed usage, agreed term,
+and meaning affected. For caption values removed or relocated, give the exact
+figure label, table entry, or text location that preserves the information,
+plus the verification performed. Mark proposed moves separately from edits.
+
 ## Preservation
 
 | File | Baseline path and SHA-256 | Edited SHA-256 | edit-check result and command |
@@ -33,9 +38,13 @@ baseline and report each command's actual result, including REVIEW or errors.
 | Numbers still belong to the same metrics, configurations and baselines | |
 | Evidence status, uncertainty, negation and scope preserved | |
 | Equations, technical names, citations and substantive coverage preserved | |
+| Terms and permitted short forms match the claims terminology record within the inspected scope | |
+| For caption edits, essential context remains and removed/relocated values have verified destinations | |
 | No new findings, causal explanations or evidence pointers invented | |
 
 Matching protected tokens is a mechanical check, not a proof of these items.
+Document resolved presentation changes beside the actual REVIEW output; a
+manual resolution does not change the mechanical result to PASS.
 
 ## Open issues and next step
 

@@ -22,14 +22,18 @@ Consider the user input before proceeding.
 1. Run `.paperkit/scripts/bash/check-prerequisites.sh --phase figures` and
    parse its JSON. Stop on error.
 
-2. Read the guidelines' figure, data and naming sections, plus
-   `paper/claims.md` and `paper/outline.md` if present.
+2. Read the guidelines' figure, data, naming, and vocabulary sections, plus
+   `.paperkit/memory/figure-captions.md`, `paper/claims.md` (including its
+   Terminology section), and `paper/outline.md` if present.
 
 3. Inventory existing figures in the paper repository and the figures the
    outline calls for.
 
-4. For each figure, write the takeaway as the caption's first sentence. If you
-   cannot state a takeaway, the figure has no claim and is flagged for cutting.
+4. For each figure, identify the purpose or supported takeaway and the claim it
+   helps explain. A diagram can explain a mechanism without claiming a numeric
+   improvement. Flag figures with no supported role. Draft captions only within
+   the requested scope; follow the caption guide on essential context and
+   selective numerical detail.
 
 5. Map each figure to the claims it supports and to the data file it is built
    from. Open the data file. Confirm it exists and that the README records how
@@ -37,7 +41,9 @@ Consider the user input before proceeding.
 
 6. Run the rule checklist for every figure. For existing figures, check the
    source (plotting script, TikZ, pgfplots) rather than guessing from the
-   rendered image where possible.
+   rendered image where possible. Also inspect rendered labels for readability
+   and consistency with the caption and terminology record. Report unavailable
+   material as unchecked; do not silently rename concepts or remove numbers.
 
 7. Write or update `paper/figures.md` from the template.
 

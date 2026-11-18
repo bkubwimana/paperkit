@@ -5,6 +5,21 @@ never the other way round.
 
 Updated: [DATE]
 
+## Terminology
+
+Extend the guidelines' vocabulary with this paper's established or agreed
+terms. Record sources such as an author instruction or a definition in the
+draft. Leave unresolved choices explicit; do not invent definitions to fill
+the table. Update this record when the author settles a naming question.
+
+| Concept and definition or metric boundary | Preferred term | Permitted abbreviation or short form | Distinct from / avoid | Source or decision |
+| --- | --- | --- | --- | --- |
+| | | | | |
+
+Use these choices in prose, figures, tables, and appendices. Conflicting
+definitions belong in Open questions; an editorial pass cannot resolve them
+by renaming one concept to match another.
+
 ## Status key
 
 - **M** measured: real run on real hardware, artifact kept

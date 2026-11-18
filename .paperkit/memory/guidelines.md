@@ -3,7 +3,7 @@
 House rules for agent-assisted paper writing. These hold across papers and
 venues. The venue profile adds form on top; it never relaxes anything here.
 
-Version: 1.1.0 | Ratified: 2026-11-10 | Owner: bkubwimana
+Version: 1.2.0 | Ratified: 2026-11-18 | Owner: bkubwimana
 
 ## Core Principles
 
@@ -62,9 +62,11 @@ this precision" is.
 
 ### VI. One term per concept
 
-The vocabulary section below is binding. A term is defined once, on first use,
-and never traded for a synonym because a sentence reads better. If the paper
-needs a concept with no term, the term is proposed and agreed before it is used.
+The vocabulary section below is binding. Give each concept one agreed term
+and keep each term's meaning fixed. Technical repetition is preferable to a
+synonym that suggests a different mechanism, metric, or experimental condition.
+If the paper needs a concept with no term, propose and agree on its name before
+using it. Follow the terminology record and checks below throughout the work.
 
 ### VII. Scope is a promise
 
@@ -76,6 +78,36 @@ follow-on paper and is not hinted at as though it were done.
 
 Write for computer systems and architecture readers. Use the vocabulary of that
 literature so a reviewer parses every term on first read.
+
+### Paper terminology record
+
+Keep paper-specific choices in the **Terminology** section of `paper/claims.md`,
+using the claims template. Record each relevant concept's definition or metric
+boundary, preferred term, permitted abbreviation, confusable terms, and the
+source of the choice. This extends the house vocabulary; it does not silently
+override it. Record established usage and author decisions without asking the
+author to approve them again. Flag genuinely ambiguous or new names for a
+decision rather than silently inventing or merging them.
+
+- Read this record before drafting, editing, or naming a figure. With an older
+  claims file, use the existing definitions and flag unresolved choices; a
+  missing table alone does not block otherwise supported work. Add the record
+  when updating claims, without inventing definitions.
+- Keep technical names, spelling, capitalization, and hyphenation consistent
+  across the title, abstract, body, captions, plot labels, legends, tables, and
+  appendices. Use the same public names for systems, components, and baselines.
+  Ordinary prose may vary; distinct technical concepts must remain distinct.
+- Define abbreviations on first use where needed for independent reading
+  (including the abstract and main text). Permit the recorded short form;
+  explain it again in a standalone figure when necessary. Do not introduce a
+  second acronym or expansion for the same concept.
+- Preserve distinctions such as inference time versus decision latency, power
+  versus energy, and memory bandwidth versus network bandwidth. A shared unit
+  or similar spelling does not establish equivalence.
+- Review usages in context. Report the location, observed term, agreed term,
+  and whether the difference changes meaning. Do not apply blind global
+  replacements to quotations, cited system names, code identifiers, or distinct
+  concepts. An ambiguous meaning is an open scientific issue, not a style fix.
 
 ### Banned terms
 
@@ -186,8 +218,11 @@ inferred from a model that is then used to validate itself.
   in the legend. No arrow styling packages.
 - **No font-size overrides** inside a figure that has no grid to align to.
   Consistent type across the figure set.
-- Caption states the takeaway, not a description of the axes. The reader should
-  get the point from the caption alone.
+- Caption identifies the figure's purpose or supported takeaway and supplies
+  what is needed to interpret it. Keep result-by-result numerical narration
+  out of the caption when the figure or text already provides it. Retain
+  necessary baselines, normalization, uncertainty, and scope. Follow
+  `figure-captions.md` in this directory; caption length is not a quality test.
 - Every figure must survive greyscale printing and reduction to column width.
 - Axes labelled with units. Log axes marked as log. Truncated axes marked.
 
@@ -231,6 +266,11 @@ wording.
 
 ### Amendment record
 
+- 1.2.0 (2026-11-18): make terminology choices explicit in the claims artifact
+  and check them across prose and figures. Replace the universal takeaway-first
+  caption rule with guidance based on figure purpose, essential context, and
+  selective numerical detail. Requested after inconsistent naming and captions
+  overloaded with numbers; sources are linked in `figure-captions.md`.
 - 1.1.0 (2026-11-10): add an architecture-focused writing and editing workflow,
   persist author voice, and protect scientific content during prose edits.
   Allow useful passive voice and separate significance/novelty support from

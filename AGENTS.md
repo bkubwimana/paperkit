@@ -15,9 +15,11 @@ on form. Say out loud when you hit such a conflict rather than quietly picking.
 
 ## Hard rules
 
-- **Do not invent terminology.** The guidelines have a vocabulary section.
-  One term per concept. If a concept has no term yet, propose one and ask.
-  Do not synonym-swap to make a sentence read better.
+- **Keep terminology consistent.** Use the guidelines' vocabulary and the
+  Terminology section of `paper/claims.md`: one agreed term per concept, with
+  recorded short forms and fixed definitions. Apply the same names in prose,
+  captions, axes, legends, tables, and appendices. If a concept has no term yet,
+  propose one and ask. Do not synonym-swap technical terms for variety.
 - **Do not write prose that is not backed by a claim row.** Every paragraph of
   the paper maps to a claim in `paper/claims.md`. If you want to assert
   something not in that file, add the claim first, with its evidence and
@@ -61,6 +63,10 @@ When asked to draft or revise prose, read
 Apply this guidance to the first draft too. It explains how to develop a
 specific architecture argument, preserve the author's voice, and retain
 technical precision. Writing samples supply style, not facts for this paper.
+
+For figures and captions, also read `.paperkit/memory/figure-captions.md`.
+Explain the figure's purpose and how to read it; select numerical detail for
+interpretation rather than reciting every plotted result.
 
 Use `/paper-edit` for an existing draft's optional audit/revision loop. An audit
 does not edit the manuscript; a rewrite request authorizes the scoped edits.
