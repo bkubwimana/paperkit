@@ -2,7 +2,7 @@
 
 Checked: [DATE] | Draft: [commit] | Deadline: [from paper/venue.md]
 
-Mechanical gate. Every item is pass, fail, or not applicable with a reason.
+Mechanical and manual gate. Every item is pass, fail, or not applicable with a reason.
 Nothing is skipped.
 
 ## Constraints
@@ -32,6 +32,7 @@ Nothing is skipped.
 | Every figure in figures.md marked final | | |
 | Every figure referenced in the text | | |
 | Every figure's data file present with README entry | | |
+| Captions and figures preserve essential context, scope, normalization, and uncertainty; removed caption values remain available at verified locations | | |
 
 ## Text
 
@@ -39,6 +40,7 @@ Nothing is skipped.
 | --- | --- | --- |
 | No TODO, TBD, XXX, FIXME or placeholder text | | |
 | No banned terms from the guidelines' vocabulary | | |
+| Technical names, short forms, and definitions are consistent across prose, figures, tables, and appendices (manual check) | | |
 | No part numbers in the paper where the family name is required | | |
 | References complete: no question marks, no missing venues or years | | |
 | No undefined references or labels in the build log | | |
@@ -47,6 +49,9 @@ Nothing is skipped.
 The editorial-pass item is N/A when no such pass was used. Editorial style
 warnings alone do not fail the gate. Unresolved scientific changes or unchecked
 preservation items do. An old edit/review report does not validate a newer draft.
+Caption length and number count alone do not fail the gate. Unresolved
+terminology conflicts, missing interpretation context, or lost scientific
+information do. Record what was inspected; a clean scan is not this manual check.
 
 ## Result
 

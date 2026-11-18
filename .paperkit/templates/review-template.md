@@ -84,4 +84,16 @@ author can look up the community's own wording.
 ### Form
 
 - [ ] Within page limit, in required format, anonymized if required?
-- [ ] Terminology matches the guidelines' vocabulary throughout?
+
+### Terminology and captions
+
+- [ ] Technical names and meanings match the guidelines and claims terminology record across prose, figures, tables, and appendices?
+- [ ] Abbreviations have consistent expansions and are defined where needed for independent reading?
+- [ ] Distinct metrics, components, and experimental conditions remain distinct rather than being merged as synonyms?
+- [ ] Each figure/caption pair conveys its purpose, essential scope, normalization, and uncertainty without unsupported interpretation?
+- [ ] Caption numbers serve interpretation or the supported takeaway, with exact values available where needed rather than unnecessary result-by-result repetition?
+
+For a terminology finding, give the location, observed usage, agreed term,
+and effect on meaning. Caption length and number count are not automatic
+severity measures. Identify missing context, misleading claims, or a concrete
+redundancy; do not manufacture a stylistic finding for a clear caption.

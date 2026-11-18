@@ -30,5 +30,5 @@ Leave uncertain preferences unset; do not invent a personality for the author.
 | | | | |
 
 Keep short approved examples here when useful. Do not copy distinctive prose
-from prior papers. Technical vocabulary remains in the guidelines; venue form
-remains in `paper/venue.md`.
+from prior papers. Technical vocabulary remains in the guidelines and the
+Terminology section of `paper/claims.md`; venue form remains in `paper/venue.md`.

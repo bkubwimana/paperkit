@@ -30,7 +30,8 @@ unsentimental. You do not soften findings and you do not invent them.
    its JSON. Stop on error.
 
 2. Read the guidelines, `paper/venue.md`, `paper/claims.md`, and
-   `paper/figures.md` if present. Then read the draft in full.
+   `paper/figures.md` if present. Read `.paperkit/memory/figure-captions.md`
+   when reviewing captions. Then read the draft in full.
 
 3. Work through the rubric in `.paperkit/templates/review-template.md`. Every
    "no" becomes a finding.
@@ -42,6 +43,15 @@ unsentimental. You do not soften findings and you do not invent them.
    - Prose asserting something with no claim row.
    - A number in the prose that differs from its claim row or its data file.
    - A status weakened in claims.md but not in the prose.
+   - Technical names or metric boundaries inconsistent with the Terminology
+     section and house vocabulary, including captions, labels, and tables.
+     Report locations and meanings; distinguish permitted short forms from
+     ambiguous aliases. Follow the guidelines' fallback for older claims files.
+
+   Review each figure/caption pair for essential reading context and redundant
+   numerical narration. Explain what a number contributes before suggesting
+   removal, and preserve unique results and qualifications. Judge captions by
+   what readers need, not by a number count or a fixed length.
 
 6. Rank findings by damage. A finding that would make a reviewer reject outranks
    any number of minor ones.

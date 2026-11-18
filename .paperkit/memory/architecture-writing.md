@@ -68,8 +68,12 @@ edit unless restructuring was requested.
   evidence pointers beside the result they bound. Do not turn "up to" into
   an average, a median into a mean, a simulated result into a hardware result,
   or a workload-specific gain into general superiority.
-- Use the paper's agreed technical names consistently. Synonym variety is
-  harmful when "request", "transaction", and "access" refer to different things.
+- Read the Terminology section of `paper/claims.md` alongside the guidelines'
+  vocabulary. Repeat an agreed technical term instead of inventing a synonym;
+  natural prose does not require varied names for the same concept. Check the
+  same names in captions, labels, tables, and appendices. "Request",
+  "transaction", and "access" may refer to different things; do not merge them
+  without evidence. Record unresolved meanings rather than silently renaming.
 
 ## Match the section's purpose
 
@@ -83,7 +87,7 @@ edit unless restructuring was requested.
 | Methodology | State what was run and how. Reproducibility details are content, even when they interrupt a smooth sentence. |
 | Evaluation | Establish the scoped result, explain what supports its interpretation, and discuss sensitivity and counterexamples. |
 | Related work | Explain the closest relevant distinction and cite it. Preserve every citation; propose citation changes separately. |
-| Caption | State the supported takeaway with the necessary configuration, units, aggregation, and uncertainty. |
+| Caption | Identify the purpose or supported takeaway; explain how to read the figure, with essential scope and uncertainty. Select numbers for interpretation rather than repeating every result; follow `figure-captions.md`. |
 
 The target venue determines the actual section spine. This table does not add
 missing sections or make an unverified assertion about a venue's requirements.
@@ -115,6 +119,11 @@ labels, terminology, evidence status, and substantive coverage. Do not add a
 specific result to make a vague sentence convincing. Record the missing support
 against its claim ID. A change to scientific meaning, scope, or claim strength
 belongs in the report as a proposed claim change, not a silent style fix.
+
+For caption edits, [figure-captions.md](figure-captions.md) explains the narrow
+case of removing a repeated value or relocating detail while preserving the
+result elsewhere in the paper. Verify and report the destination and resolve
+the actual mechanical REVIEW; do not silently drop scientific information.
 
 Use `/paper-edit` for an existing draft's audit and revision. Use
 `pk edit-check BEFORE.tex AFTER.tex` for each edited source file, then manually

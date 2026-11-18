@@ -37,6 +37,16 @@ Consider the user input before proceeding.
    - Numbers: for each number in the prose that has a claim row, compare it to
      the data file. Report every mismatch with both values.
    - Figures: all final, all referenced, all with data files.
+   - Terminology: manually check the guidelines and claims terminology record
+     against text, captions, axes, legends, tables, and appendices. Confirm
+     consistent technical names, permitted short forms, and fixed definitions.
+     An absent record in an older project is not itself a failure; unresolved
+     conflicting meanings or names are. The text scanner cannot prove this.
+   - Captions: follow `.paperkit/memory/figure-captions.md`; verify essential
+     scope, normalization, and uncertainty against the figure and evidence.
+     If values were removed from a caption, check their recorded locations.
+     Excessive length or numerical detail alone is an editorial finding;
+     missing context or lost scientific information must be resolved.
    - References and labels: read the build log for undefined references.
    - AI assistance: check the verified venue policy and any required declaration.
    - Editorial preservation: if an edit report exists for this draft, check

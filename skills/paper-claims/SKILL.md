@@ -46,7 +46,10 @@ Consider the user input before proceeding.
    defend.
 
 9. Write or update `paper/claims.md` from the template. Keep the cut and
-   deferred table; never silently drop a row.
+   deferred table; never silently drop a row. Maintain its Terminology section
+   from the guidelines, established definitions, and author decisions. Record
+   preferred terms, short forms, and distinctions; put ambiguous meanings or
+   unresolved names in Open questions instead of silently normalizing them.
 
 ## Rules
 

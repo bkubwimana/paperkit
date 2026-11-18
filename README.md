@@ -91,6 +91,27 @@ inventing new ones: the SIGPLAN Empirical Evaluation Guidelines, SIGARCH's
 checklist manifesto for empirical evaluation, and Heiser's systems
 benchmarking crimes. The review rubric uses their categories.
 
+### Consistent terminology and focused captions
+
+The claims template includes a Terminology section for each concept's agreed
+name, definition or metric boundary, permitted short form, and confusable terms.
+Drafting, editing, figure planning, review, and submission checks use this
+record alongside the house vocabulary. Technical names stay consistent across
+the manuscript, including axes, legends, captions, tables, and appendices.
+Agents flag conflicting meanings instead of treating them as interchangeable
+synonyms. Existing projects can add the table during their next claims update.
+
+The [caption guide](.paperkit/memory/figure-captions.md) draws on scientific
+publishing guidance and inspected architecture papers. Captions explain the
+figure's purpose and how to interpret it. Include numbers when they establish
+context or quantify the main point; avoid repeating every plotted result.
+There is no fixed number quota. Preserve baselines, uncertainty, and scientific
+scope, and verify where exact values remain if they leave the caption.
+
+These are agent instructions and manual review checks. `pk scan` does not
+detect arbitrary terminology conflicts or judge caption quality, and
+`pk edit-check --term` only compares occurrences of the supplied terms.
+
 ### Learn from recent architecture papers
 
 The bundled [annotated reading guide](.paperkit/references/architecture-exemplars.md)
